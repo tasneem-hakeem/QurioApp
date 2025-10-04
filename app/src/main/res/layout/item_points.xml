@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/points_container"
+        android:layout_width="144dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/asymmetric_rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/icon_plus"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintStart_toStartOf="@+id/points_container"
+        app:layout_constraintTop_toTopOf="@+id/points_container" />
+
+    <TextView
+        android:id="@+id/text_points"
+        style="@style/Label.XSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/points"
+        android:textColor="@color/shade_tertiary"
+        app:layout_constraintEnd_toEndOf="@+id/points_container"
+        app:layout_constraintStart_toStartOf="@+id/points_container"
+        app:layout_constraintTop_toTopOf="@+id/points_container" />
+
+    <TextView
+        android:id="@+id/text_points_value"
+        style="@style/Label.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/shade_primary"
+        app:drawableStartCompat="@drawable/ic_coin_stack"
+        app:layout_constraintBottom_toBottomOf="@+id/points_container"
+        app:layout_constraintEnd_toEndOf="@+id/points_container"
+        app:layout_constraintStart_toStartOf="@+id/points_container"
+        app:layout_constraintTop_toBottomOf="@+id/text_points"
+        tools:text="5400"/>
+
+    <View
+        android:id="@+id/top_rounded_bar"
+        android:layout_width="48dp"
+        android:layout_height="2dp"
+        android:background="@drawable/top_rounded_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/points_container"
+        app:layout_constraintEnd_toEndOf="@+id/points_container"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
