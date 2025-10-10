@@ -9,55 +9,68 @@
         android:id="@+id/lives_container"
         android:layout_width="96dp"
         android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/asymmetric_rectangle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@drawable/lives_background"
+        app:layout_constraintStart_toEndOf="@+id/add_lives"
+        app:layout_constraintTop_toBottomOf="@+id/add_lives" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/add_lives"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="2dp"
         android:contentDescription="@string/icon_plus"
         android:src="@drawable/ic_plus"
-        app:layout_constraintStart_toStartOf="@+id/lives_container"
-        app:layout_constraintTop_toTopOf="@+id/lives_container" />
+        android:translationX="-2dp"
+        app:layout_constraintStart_toStartOf="@id/lives_container"
+        app:layout_constraintTop_toTopOf="@id/lives_container" />
 
     <TextView
-        android:id="@+id/text_lives"
-        style="@style/Label.XSmall"
+        android:id="@+id/title_lives"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:text="@string/lives"
+        android:textAppearance="@style/Label.XSmall"
         android:textColor="@color/shade_tertiary"
-        app:layout_constraintEnd_toEndOf="@+id/lives_container"
-        app:layout_constraintStart_toStartOf="@+id/lives_container"
-        app:layout_constraintTop_toTopOf="@+id/lives_container" />
+        app:layout_constraintEnd_toEndOf="@id/lives_container"
+        app:layout_constraintStart_toStartOf="@id/lives_container"
+        app:layout_constraintTop_toTopOf="@id/lives_container" />
+
+    <ImageView
+        android:id="@+id/icon_coin"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="2dp"
+        android:contentDescription="@string/icon_coin"
+        android:src="@drawable/ic_coin"
+        app:layout_constraintEnd_toStartOf="@+id/lives_count"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/lives_container"
+        app:layout_constraintTop_toBottomOf="@id/title_lives" />
+
 
     <TextView
-        android:id="@+id/text_lives_value"
-        style="@style/Label.Medium"
+        android:id="@+id/lives_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text=""
-        android:textAlignment="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:textAppearance="@style/Label.Medium"
         android:textColor="@color/shade_primary"
-        app:drawableStartCompat="@drawable/ic_coin"
-        app:layout_constraintBottom_toBottomOf="@+id/lives_container"
-        app:layout_constraintEnd_toEndOf="@+id/lives_container"
-        app:layout_constraintStart_toStartOf="@+id/lives_container"
-        app:layout_constraintTop_toBottomOf="@+id/text_lives"
-        tools:text="5" />
+        app:layout_constraintBottom_toBottomOf="@id/icon_coin"
+        app:layout_constraintEnd_toEndOf="@id/lives_container"
+        app:layout_constraintStart_toEndOf="@+id/icon_coin"
+        app:layout_constraintTop_toTopOf="@id/icon_coin"
+        tools:text="4" />
 
     <View
-        android:id="@+id/top_rounded_bar"
-        android:layout_width="48dp"
-        android:layout_height="2dp"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="1dp"
         android:background="@drawable/top_rounded_bar"
-        app:layout_constraintBottom_toBottomOf="@+id/lives_container"
-        app:layout_constraintEnd_toEndOf="@+id/lives_container"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/lives_container"
+        app:layout_constraintEnd_toEndOf="@id/lives_container"
+        app:layout_constraintStart_toStartOf="@id/lives_container" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

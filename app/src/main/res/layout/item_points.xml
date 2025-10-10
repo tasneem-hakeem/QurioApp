@@ -9,56 +9,66 @@
         android:id="@+id/points_container"
         android:layout_width="144dp"
         android:layout_height="66dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/asymmetric_rectangle"
+        android:background="@drawable/points_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/icon_plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/icon_plus"
-        android:src="@drawable/ic_plus"
-        app:layout_constraintStart_toStartOf="@+id/points_container"
-        app:layout_constraintTop_toTopOf="@+id/points_container" />
+        android:layout_width="24dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/icon_crown"
+        android:src="@drawable/ic_crown"
+        android:translationY="-10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/points_container"
+        app:layout_constraintStart_toStartOf="@id/points_container"
+        app:layout_constraintTop_toTopOf="@id/points_container" />
 
     <TextView
-        android:id="@+id/text_points"
-        style="@style/Label.XSmall"
+        android:id="@+id/points_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="17dp"
         android:text="@string/points"
+        android:textAppearance="@style/Label.XSmall"
         android:textColor="@color/shade_tertiary"
-        app:layout_constraintEnd_toEndOf="@+id/points_container"
-        app:layout_constraintStart_toStartOf="@+id/points_container"
-        app:layout_constraintTop_toTopOf="@+id/points_container" />
+        app:layout_constraintEnd_toEndOf="@id/points_container"
+        app:layout_constraintStart_toStartOf="@id/points_container"
+        app:layout_constraintTop_toTopOf="@id/points_container" />
+
+    <ImageView
+        android:id="@+id/points_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="2dp"
+        android:contentDescription="@string/icon_coin_stack"
+        android:src="@drawable/ic_coin_stack"
+        app:layout_constraintEnd_toStartOf="@+id/points_count"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/points_container"
+        app:layout_constraintTop_toBottomOf="@id/points_label" />
 
     <TextView
-        android:id="@+id/text_points_value"
-        style="@style/Label.Medium"
+        android:id="@+id/points_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text=""
-        android:textAlignment="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:textAppearance="@style/Label.Medium"
         android:textColor="@color/shade_primary"
-        app:drawableStartCompat="@drawable/ic_coin_stack"
-        app:layout_constraintBottom_toBottomOf="@+id/points_container"
-        app:layout_constraintEnd_toEndOf="@+id/points_container"
-        app:layout_constraintStart_toStartOf="@+id/points_container"
-        app:layout_constraintTop_toBottomOf="@+id/text_points"
-        tools:text="5400"/>
+        app:layout_constraintBottom_toBottomOf="@id/points_icon"
+        app:layout_constraintEnd_toEndOf="@id/points_container"
+        app:layout_constraintStart_toEndOf="@+id/points_icon"
+        app:layout_constraintTop_toTopOf="@id/points_icon"
+        tools:text="5200" />
 
     <View
-        android:id="@+id/top_rounded_bar"
-        android:layout_width="48dp"
-        android:layout_height="2dp"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginHorizontal="16dp"
         android:background="@drawable/top_rounded_bar"
-        app:layout_constraintBottom_toBottomOf="@+id/points_container"
-        app:layout_constraintEnd_toEndOf="@+id/points_container"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/points_container"
+        app:layout_constraintEnd_toEndOf="@id/points_container"
+        app:layout_constraintStart_toStartOf="@id/points_container" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
