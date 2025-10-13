@@ -15,4 +15,11 @@
     <string name="icon_coin_stack">Icon Coin Stack</string>
     <string name="icon_arrow_right">Icon Arrow Right</string>
     <string name="icon_cup">Icon Cup</string>
+    <string name="icon_star">Icon Star</string>
+    <string name="reward">Reward</string>
+    <string name="correct">Correct</string>
+    <string name="incorrect">incorrect</string>
+    <string name="skipped">skipped</string>
+    <string name="great_job">Great Jop</string>
+    <string name="you_lose">You Lose</string>
 </resources>

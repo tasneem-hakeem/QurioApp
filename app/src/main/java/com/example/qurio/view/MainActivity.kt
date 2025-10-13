@@ -1,4 +1,4 @@
-package com.example.qurio.ui
+package com.example.qurio.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
