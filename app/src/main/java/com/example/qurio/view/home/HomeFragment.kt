@@ -1,24 +1,20 @@
 package com.example.qurio.view.home
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import com.example.qurio.R
+import com.example.qurio.databinding.FragmentHomeBinding
+import com.example.qurio.presenter.home.HomePresenter
 import com.example.qurio.view.base.BaseFragment
 
-/*
-class HomeFragment : BaseFragment<>() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+class HomeFragment : BaseFragment<FragmentHomeBinding, HomeView, HomePresenter>(), HomeView {
+    override fun initViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): FragmentHomeBinding {
+        return FragmentHomeBinding.inflate(inflater, container, false)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    override fun initPresenter(): HomePresenter {
+        return HomePresenter(this)
     }
-}*/
+}
