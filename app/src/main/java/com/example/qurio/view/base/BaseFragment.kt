@@ -13,20 +13,10 @@ abstract class BaseFragment<VB : ViewBinding, VIEW : BaseView, PRESENTER : BaseP
     private lateinit var _binding: VB
     protected val binding get() = _binding
 
-    private lateinit var _presenter: PRESENTER
-    protected val presenter get() = _presenter
-
     protected abstract fun initViewBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ): VB
-
-    protected abstract fun initPresenter(): PRESENTER
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        _presenter = initPresenter()
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,10 +25,5 @@ abstract class BaseFragment<VB : ViewBinding, VIEW : BaseView, PRESENTER : BaseP
     ): View {
         _binding = initViewBinding(inflater, container)
         return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _presenter.clear()
     }
 }
