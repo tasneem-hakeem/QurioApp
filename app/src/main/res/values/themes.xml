@@ -1,5 +1,7 @@
 <resources>
     <style name="Base.Theme.Qurio" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
     <style name="Theme.Qurio" parent="Base.Theme.Qurio" />
