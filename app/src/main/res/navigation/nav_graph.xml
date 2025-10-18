@@ -2,9 +2,9 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onBoardingFragment">
+    app:startDestination="@id/homeFragment">
 
-    <fragment
+    <!--<fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.qurio.view.onBoarding.OnBoardingFragment"
         android:label="OnBoarding">
@@ -13,7 +13,7 @@
             app:destination="@id/homeFragment"
             app:launchSingleTop="true"
             app:popUpToInclusive="true" />
-    </fragment>
+    </fragment>-->
 
     <fragment
         android:id="@+id/homeFragment"
